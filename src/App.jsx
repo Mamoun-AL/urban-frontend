@@ -17,7 +17,7 @@ import axios from "axios";
 
 
 // Set Axios defaults
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'https://urban-backend-2.onrender.com'; // Updated URL
 axios.defaults.withCredentials = true;
 
 function App() {
