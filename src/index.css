@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+      background-color: theme('colors.grayf8');
+      font-family: "Mukta", sans-serif;
+    }
+.upperli li{
+    color: theme('colors.black');
+    text-transform:capitalize ;
+    padding: 4px 2px;
+    font-weight: 500;
+}
+.rrdf{
+width: 238px;
+height: 210px;
+  }
+  .btnactive{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: theme('colors.black');
+    padding: 4px 6px;
+    border-bottom: 3px solid theme('colors.green');
+  }
+  .btninactive{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 4px 6px;
+    color: rgba(106, 100, 100, 0.5608);
+  }
+  .btnactive:hover , .btninactive:hover{
+    cursor: pointer;
+
+  }
+
+  .popupoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  .bg1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(118, 116, 116, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+
+  }
+
+  input:focus{
+    outline: none;
+}
+  
+    .close-button {
+      position: absolute;
+      top: 15px;
+      right: 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 48px;
+      color: theme('colors.green');
+    }
+    button:disabled {
+      cursor: not-allowed; /* Default cursor for disabled elements */
+    }
+    .myshadow{
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  .bs1{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .bs2{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Custom styles for Swiper navigation buttons */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 18px; /* Adjust the icon size */
+  color: theme('colors.grayf8'); /* Adjust the icon color */
+  display: none;
+  padding: 4px 6px;
+  background-color: #3e3b3b7d;
+  border-radius: 5px;
+}
+.img-box:hover .swiper-button-next::after, 
+.img-box:hover .swiper-button-prev::after{
+  display: block; /* Show the buttons on hover */
+}
+.img-box:hover .swiper-pagination-bullet{
+display: inline-block;
+}
+.img-box:hover{
+  cursor: pointer;
+}
+.swiper-pagination-bullet{
+  display: none;
+}
+.swiper-pagination-bullet {
+  font-size: 2px;
+  width:8px;
+  height: 8px;
+  background-color: theme('colors.green'); /* Change this to your desired inactive bullet color */
+}
+.box-border{
+  border-color: #37373732;
+  transition: box-shadow 0.3s ease;
+}
+.box-border:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.keyword-list li {
+  position: relative;
+
+}
+.keyword-list li{
+  padding-right: 6px ;
+}
+.keyword-list li:not(:first-child){
+padding-left: 6px ;
+}
+
+.keyword-list li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px; /* Adjust this to position the border as needed */
+  bottom: 10%; /* Adjust this to control the height of the border */
+  border-right: 1px solid theme('colors.green'); /* Your border color */
+  height: 60%; /* Adjust this to make the border height shorter */
+  transform: translateY(-50%);
+}
+
+.keyword-list li:last-child::before {
+  display: none; /* Remove border from the last item */
+  
+}
+.keyword-loction li {
+  position: relative;
+
+}
+.keyword-loction li::before {
+  content: ',';
+  font-size: 18px;
+  position: absolute;
+  right: -2px;
+  top: 10px; /* Adjust this to position the border as needed */
+  bottom: 0px; /* Adjust this to control the height of the border */
+  height: 27px; /* Adjust this to make the border height shorter */
+  transform: translateY(-50%);
+}
+
+.keyword-loction li:last-child::before {
+  display: none; /* Remove border from the last item */
+}
+.keyword-loction li{
+  padding-right: 6px ;
+}
+.keyword-loction li:not(:first-child){
+padding-left: 5px ;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  /* Remove default styling */
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.select-container::after {
+  content: '\25BC'; /* Unicode for a downward arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust position as needed */
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from interfering with clicks */
+  font-size: 16px; /* Match font size with the select */
+  color: #333; /* Arrow color */
+}
+.hvbtn:hover{
+cursor: pointer;
+  background-color:#f1f1f1;
+  height: fit-content;
+}
+.in-se{
+  position: relative;
+}
+.in-pop{
+position: absolute;
+top: 70;
+left: -2px;
+}
+
+.css-1wycb6-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  border: 0;
+
+}
+.hv1:hover , .hv1:hover .inp1{
+  background-color: #ececec;
+  cursor: pointer;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border: none!important;
+  outline: none !important;
+}
+.bs3{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+input[type="checkbox"] {
+  accent-color:theme('colors.green'); /* Color when checked */
+}
+
+.hidden{
+  display: none;
+}
+.cp{
+  cursor: pointer;
+}
+
+/* input:hover,
+select:hover,
+textarea:hover {
+  border: 2px solid black;
+  transition: border-color 0.3s ease; 
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid black; 
+  outline: none; 
+  transition: border-color 0.3s ease; 
+} */
+.css-1h4bzp1-MuiButtonBase-root-MuiMenuItem-root.Mui-selected{
+  background-color: #104f522c !important;
+}
+.css-1h4bzp1-MuiButtonBase-root-MuiMenuItem-root:hover{
+  background-color: #1a5c6013 !important;
+
+}
+.des-box{
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden!important;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+.des-box:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.des-box::before {
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  background: linear-gradient(
+    rgba(60, 110, 113, 0.5), /* Starting color with 70% opacity */
+    rgba(60, 110, 113, 0.2)  /* Ending color with 30% opacity */
+  );
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for overlay */
+  z-index: 1; /* Ensure the overlay is on top of other content */
+}
+
+.des-box:hover::before {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.text-anim{
+
+  position: absolute;
+  bottom: -70px;
+  left: 15px;
+  color: #f8f8f8;
+  text-transform: capitalize;
+  overflow: hidden;
+  transition: bottom 0.3s ease-in-out;
+
+}
+.des-box:hover .text-anim{
+  bottom: 15px;
+  transform: translate(1.2);
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+height: 24px;
+  text-align: center;
+
+  padding: 4px;
+  aspect-ratio:1;
+  border-radius: 50%;
+  background: #f8f8f8;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+.css-1908tks-MuiButtonBase-root-MuiButton-root{  
+  min-width: 10px !important;
+
+}
+.himg{
+  height: calc(100% - 8px);
+}
