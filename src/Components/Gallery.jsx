@@ -55,7 +55,7 @@ const Gallery = ({ togglePopup, images }) => {
                 {row.map((image, imageIndex) => (
                   <img
                     key={imageIndex}
-                    src={`http://localhost:3000/uploads/${image}`}
+                    src={`https://urban-backend-2.onrender.com/uploads/${image}`}
                     alt={`Gallery Image ${rowIndex * 2 + imageIndex + 1}`}
                     className={`object-cover ${row.length === 1 ? 'w-full h-[400px]' : 'w-full h-[300px]'} hover:scale-105  mb-4 cursor-pointer duration-300`}
                   />

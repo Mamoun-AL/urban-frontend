@@ -30,7 +30,7 @@ export default function ListingImages({ file }) {
       {/* Large Image */}
       <div className="col-span-4 row-span-3">
         <img
-          src={`http://localhost:3000/uploads/${file[0]}`}
+          src={`https://urban-backend-2.onrender.com/uploads/${file[0]}`}
           className="rounded-lg  himg cursor-pointer "
           onClick={togglePopup}
           style={{width: '100%', objectFit: 'cover', filter: "grayscale(0%) brightness(1)", transition: "filter 0.3s ease" }}
@@ -42,7 +42,7 @@ export default function ListingImages({ file }) {
       {/* Smaller Images */}
       <div className="col-span-2">
         <img
-          src={`http://localhost:3000/uploads/${file[1]}`}
+          src={`https://urban-backend-2.onrender.com/uploads/${file[1]}`}
           className="rounded-lg cursor-pointer "
           onClick={togglePopup}
           style={{width: '100%', height: 'auto', objectFit: 'cover', filter: "grayscale(0%) brightness(1)", transition: "filter 0.3s ease" }}
@@ -52,7 +52,7 @@ export default function ListingImages({ file }) {
       </div>
       <div className="col-span-2">
         <img
-          src={`http://localhost:3000/uploads/${file[2]}`}
+          src={`https://urban-backend-2.onrender.com/uploads/${file[2]}`}
           className="rounded-lg cursor-pointer "
           onClick={togglePopup}
           style={{width: '100%', height: 'auto', objectFit: 'cover', filter: "grayscale(0%) brightness(1)", transition: "filter 0.3s ease" }}

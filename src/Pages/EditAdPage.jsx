@@ -233,7 +233,7 @@ const handelCityChange = (e) => {
 
            const dbPreviews = adData.File.map(file => ({
             name: file, // The 'file' itself is the name in your case
-            url: `http://localhost:3000/uploads/${file}` // Construct the URL for the image based on its location
+            url: `https://urban-backend-2.onrender.com/uploads/${file}` // Construct the URL for the image based on its location
           }));
           console.log(dbPreviews)
           setDbImagePreviews(dbPreviews);        

@@ -27,7 +27,7 @@ const ImageGallery = ({ File }) => {
           File.map((img, index) => (
             <SwiperSlide key={index}>
               <img
-                src={`http://localhost:3000/uploads/${img}`}
+                src={`https://urban-backend-2.onrender.com/uploads/${img}`}
                 alt={`Uploaded ${index}`}
                 style={{ width: '100%', height: '250px', objectFit: 'cover' }}
               />

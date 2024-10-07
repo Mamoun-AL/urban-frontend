@@ -37,7 +37,7 @@ const ListingPage = () => {
         };
 
         // Send GET request to the filtered_listing endpoint
-        const response = await axios.get('http://localhost:3000/filtered_listings', { params });
+        const response = await axios.get('https://urban-backend-2.onrender.com/filtered_listings', { params });
 
         setListings(response.data); // Update listings with fetched data
       } catch (error) {

@@ -114,7 +114,7 @@ export default function MyAdsPage() {
             return (
               <div key={ad._id} className='flex items-start justify-between border-b pt-3 pb-6'>
                 <img
-                  src={`http://localhost:3000/uploads/${ad.File[0]}`}
+                  src={`https://urban-backend-2.onrender.com/uploads/${ad.File[0]}`}
                   alt={ad.Title}
                   style={{ width: '150px', height: '120px', objectFit: 'cover' }}
                   className='flex-shrink-0'
