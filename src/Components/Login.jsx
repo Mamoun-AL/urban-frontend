@@ -121,21 +121,20 @@ const Login = ({ togglePopup }) => {
     setIsSubmitting(true);
 
     try {
-      await simulateNetworkLatency(1000); 
-      const response = await axios.post('/users/login', { email, password } ,{ withCredentials: true,  );
+  await simulateNetworkLatency(1000); 
+  const response = await axios.post('/users/login', { email, password }, { withCredentials: true });
 
-      const { token } = response.data;
+  // No need to manually set the token in local storage
+  // const { token } = response.data; 
 
-        // Store the token in local storage or a cookie
-        localStorage.setItem('token', token);  // or set it as a cookie
-
-      setSuccessmsg("Login successful! Redirecting...");
-      setError('');
-      // Optionally, redirect or update state here
-      setTimeout(() => {
-        // window.location.href = '/';
-      }, 2000); // Adjust delay as needed
-    } catch (error) {
+  setSuccessmsg("Login successful! Redirecting...");
+  setError('');
+  
+  // Optionally, redirect or update state here
+  setTimeout(() => {
+    // window.location.href = '/';
+  }, 2000); // Adjust delay as needed
+} catch (error) {
       const errorMessage = error.response?.data?.error || 'An unexpected error occurred';
       setError(errorMessage);
     } finally {
