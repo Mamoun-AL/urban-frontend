@@ -23,7 +23,7 @@ function App() {
   return (
     <UserContextProvider>
       {/* Wrap the Routes inside BrowserRouter */}
-      <Router>
+
         <Routes>
           <Route path="/login" element={<Login />} />
 
@@ -43,7 +43,7 @@ function App() {
             <Route path="/listing/:ad_id" element={<AdPage />} />
           </Route>
         </Routes>
-      </Router>
+
     </UserContextProvider>
   );
 }
