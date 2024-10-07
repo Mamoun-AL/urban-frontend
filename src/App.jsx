@@ -10,11 +10,10 @@ import AddListingPage from "./Pages/AddListingPage.jsx";
 import AdPage from "./Pages/AdPage.jsx";
 import MyAdsPage from "./Pages/MyAdsPage.jsx";
 import Login from "./Components/Login.jsx";
-import { Route, Router, Routes } from 'react-router-dom';  // Removed BrowserRouter here
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Use BrowserRouter
 import React from "react";
 import { UserContextProvider } from "./Components/UserContext";
 import axios from "axios";
-
 
 // Set Axios defaults
 axios.defaults.baseURL = 'https://urban-backend-2.onrender.com'; // Updated URL
@@ -23,27 +22,27 @@ axios.defaults.withCredentials = true;
 function App() {
   return (
     <UserContextProvider>
-      {/* Routes are wrapped directly without a Router */}
+      {/* Wrap the Routes inside BrowserRouter */}
       <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
+        <Routes>
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<Layout className=" bg-grayf8" />}>
-          <Route index element={<HomePage />} />
+          <Route path="/" element={<Layout className=" bg-grayf8" />}>
+            <Route index element={<HomePage />} />
 
-          {/* Protected Routes */}
-          <Route path="/profile" element={<ProtectedRoute element={<ProfilePage />} />} />
-          <Route path="/account" element={<ProtectedRoute element={<AccountPage />} />} />
-          <Route path="/security" element={<ProtectedRoute element={<SecurityPage />} />} />
-          <Route path="/myads/:id" element={<ProtectedRoute element={<EditAdPage />} />} />
-          <Route path="/myads" element={<ProtectedRoute element={<MyAdsPage />} />} />
-          <Route path="/new-ad" element={<ProtectedRoute element={<AddListingPage />} />} />
+            {/* Protected Routes */}
+            <Route path="/profile" element={<ProtectedRoute element={<ProfilePage />} />} />
+            <Route path="/account" element={<ProtectedRoute element={<AccountPage />} />} />
+            <Route path="/security" element={<ProtectedRoute element={<SecurityPage />} />} />
+            <Route path="/myads/:id" element={<ProtectedRoute element={<EditAdPage />} />} />
+            <Route path="/myads" element={<ProtectedRoute element={<MyAdsPage />} />} />
+            <Route path="/new-ad" element={<ProtectedRoute element={<AddListingPage />} />} />
 
-          {/* ListingPage with URL parameters */}
-          <Route path="/listing" element={<ListingPage />} />
-          <Route path="/listing/:ad_id" element={<AdPage/>}/>
+            {/* ListingPage with URL parameters */}
+            <Route path="/listing" element={<ListingPage />} />
+            <Route path="/listing/:ad_id" element={<AdPage />} />
           </Route>
-      </Routes>
+        </Routes>
       </Router>
     </UserContextProvider>
   );
