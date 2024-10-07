@@ -126,6 +126,7 @@ const Login = ({ togglePopup }) => {
 
   // No need to manually set the token in local storage
   // const { token } = response.data; 
+console.log("Document Cookies:", document.cookie);
 
   setSuccessmsg("Login successful! Redirecting...");
   setError('');
