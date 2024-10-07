@@ -123,6 +123,12 @@ const Login = ({ togglePopup }) => {
     try {
       await simulateNetworkLatency(1000); 
       const response = await axios.post('/users/login', { email, password });
+
+      const { token } = response.data;
+
+        // Store the token in local storage or a cookie
+        localStorage.setItem('token', token);  // or set it as a cookie
+
       setSuccessmsg("Login successful! Redirecting...");
       setError('');
       // Optionally, redirect or update state here
