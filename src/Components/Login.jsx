@@ -122,7 +122,7 @@ const Login = ({ togglePopup }) => {
 
     try {
       await simulateNetworkLatency(1000); 
-      const response = await axios.post('/users/login', { email, password });
+      const response = await axios.post('/users/login', { email, password } ,{ withCredentials: true,  );
 
       const { token } = response.data;
 
