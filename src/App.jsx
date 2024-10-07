@@ -10,7 +10,7 @@ import AddListingPage from "./Pages/AddListingPage.jsx";
 import AdPage from "./Pages/AdPage.jsx";
 import MyAdsPage from "./Pages/MyAdsPage.jsx";
 import Login from "./Components/Login.jsx";
-import { Route, Routes } from 'react-router-dom';  // Removed BrowserRouter here
+import { Route, Router, Routes } from 'react-router-dom';  // Removed BrowserRouter here
 import React from "react";
 import { UserContextProvider } from "./Components/UserContext";
 import axios from "axios";
@@ -24,6 +24,7 @@ function App() {
   return (
     <UserContextProvider>
       {/* Routes are wrapped directly without a Router */}
+      <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/listing/:ad_id" element={<AdPage/>}/>
           </Route>
       </Routes>
+      </Router>
     </UserContextProvider>
   );
 }
