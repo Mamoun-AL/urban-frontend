@@ -155,7 +155,7 @@ const Login = ({ togglePopup }) => {
       setError1('');
       setSuccessmsg("Registration successful! Logging in...");
       setTimeout(() => {
-        window.location.href = '/';
+        // window.location.href = '/';
       }, 2000); // Adjust delay as needed
     } catch (error) {
       const errorMessage = error.response?.data?.error || 'An unexpected error occurred';
